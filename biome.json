@@ -27,6 +27,11 @@
     "indentStyle": "space",
     "formatWithErrors": false
   },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "single"
+    }
+  },
   "organizeImports": {
     "enabled": true
   }
