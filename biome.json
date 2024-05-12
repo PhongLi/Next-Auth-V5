@@ -23,6 +23,20 @@
       "suspicious": {
         "noExplicitAny": "off",
         "noEmptyInterface": "off"
+      },
+      "style": {
+        "noCommaOperator": "error",
+        "noShoutyConstants": "error",
+        "noParameterProperties": "error",
+        "noVar": "error",
+        "useConst": "error",
+        "useShorthandFunctionType": "error",
+        "useExportType": "error",
+        "useImportType": "error",
+        "useNodejsImportProtocol": "error",
+        "useLiteralEnumMembers": "error",
+        "useEnumInitializers": "error",
+        "useAsConstAssertion": "error"
       }
     }
   },
