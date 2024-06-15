@@ -9,7 +9,14 @@ import { db } from "./lib/db";
 export const { handlers, signIn, signOut, auth } = NextAuth({
   callbacks: {
     async signIn({ user }) {
-      const existingUser = await getUserById(user.id as string);
+      let existingUser = null;
+
+      try {
+        existingUser = await getUserById(user.id as string);
+      } catch (error) {
+        console.error("Failed to fetch user:", error);
+        return false;
+      }
 
       if (!existingUser || !existingUser.emailVerified) return false;
       return true;
